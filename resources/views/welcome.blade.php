@@ -236,14 +236,6 @@
                                 de desarrollo frontend.
                             </p>
                         </li>
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">Instituto Superior de Diseño y Tecnología</h4>
-                            <span>2002 — 2004</span>
-                            <p class="timeline-text">
-                                Fundamentos de programación, diseño gráfico y desarrollo web. Certificación en tecnologías
-                                web modernas.
-                            </p>
-                        </li>
                     </ol>
                 </section>
 
