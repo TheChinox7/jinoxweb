@@ -1,0 +1,36 @@
+/* Animaciones para las secciones */
+[data-page] {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 0.5s ease-out;
+    position: absolute;
+    width: 100%;
+    visibility: hidden;
+}
+
+[data-page].active {
+    opacity: 1;
+    transform: translateX(0);
+    position: relative;
+    visibility: visible;
+}
+
+/* Animación de salida */
+[data-page].fade-out {
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+/* Ajuste para el contenedor principal */
+.main-content {
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Aseguramos que las secciones no activas no ocupen espacio */
+article:not(.active) {
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
