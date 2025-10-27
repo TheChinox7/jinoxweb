@@ -1,61 +1,117 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# JinoxWeb — Portafolio en Laravel 12
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Proyecto de portafolio personal construido sobre Laravel 12 (PHP 8.2), con vistas personalizadas, assets estáticos y un formulario de contacto que integra WhatsApp mediante Evolution API.
 
-## About Laravel
+## Características
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- Página principal (`/`) con contenido en español y diseño de portafolio.
+- Formulario de contacto que envía mensajes por WhatsApp via Evolution API.
+- Pipeline de assets con Vite (`npm run dev` / `npm run build`).
+- Migraciones, colas y sesiones configuradas en base de datos.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Tecnologías y versiones
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- `PHP` `^8.2`
+- `Laravel` `^12.0`
+- `Vite` `^7.x`
+- `Node.js` y `npm` (para assets)
+- Opcional: `tailwindcss` (presente en devDependencies, no requerido para los estilos actuales).
 
-## Learning Laravel
+## Estructura del proyecto
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- `routes/web.php`: Define rutas principales (`GET /`, `POST /contact`).
+- `resources/views/welcome.blade.php`: Vista principal del portafolio y formulario de contacto.
+- `public/`: Assets estáticos (CSS, JS, imágenes). El front controller es `public/index.php` con `.htaccess` para Apache.
+- `app/Http/Controllers/ContactController.php`: Lógica para enviar WhatsApp usando Evolution API.
+- `config/*`: Configuraciones de app, mail, queue, etc.
+- `database/migrations/*`: Migraciones por defecto (usuarios, cache, jobs).
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Requisitos
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- XAMPP (Apache y MySQL activos) o entorno LAMP/Laravel equivalente.
+- Base de datos MySQL creada: `jinoxweb` (según `.env.example`).
+- Composer y PHP 8.2.
+- Node.js y npm para el pipeline de assets.
 
-## Laravel Sponsors
+## Instalación
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+1. Clona o copia el proyecto dentro de `htdocs` (por ejemplo: `.../xamppfiles/htdocs/jinoxweb`).
+2. Ejecuta en la raíz del proyecto:
+   - `composer install`
+   - Copia el archivo de entorno: `cp .env.example .env`
+   - Genera la clave de aplicación: `php artisan key:generate`
+   - Configura tus credenciales en `.env` (ver sección Configuración).
+   - Ejecuta migraciones: `php artisan migrate`
+   - Instala dependencias de frontend: `npm install`
 
-### Premium Partners
+## Configuración (.env)
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Variables relevantes en `.env`:
 
-## Contributing
+- App y base de datos:
+  - `APP_URL=http://localhost`
+  - `DB_CONNECTION=mysql`
+  - `DB_HOST=127.0.0.1`
+  - `DB_PORT=3306`
+  - `DB_DATABASE=jinoxweb`
+  - `DB_USERNAME=root`
+  - `DB_PASSWORD=`
+- Sesiones/colas/cache (por defecto en base de datos):
+  - `SESSION_DRIVER=database`
+  - `QUEUE_CONNECTION=database`
+  - `CACHE_STORE=database`
+- Evolution API (WhatsApp):
+  - `EVOLUTION_API_URL` (URL base de la API)
+  - `EVOLUTION_API_KEY` (API key privada)
+  - `EVOLUTION_API_INSTANCE_NAME` (nombre de instancia)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+## Ejecución en desarrollo
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- Opción 1 (Apache/XAMPP): accede a `http://localhost/jinoxweb/public`.
+- Opción 2 (servidor embebido): `php artisan serve` y abre la URL indicada.
+- Activa Vite para assets: `npm run dev`.
+- Alternativa integrada: `composer run dev` (levanta servidor PHP, queue listener y Vite con `concurrently`).
 
-## Security Vulnerabilities
+## Compilación de assets
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- Desarrollo: `npm run dev`
+- Producción: `npm run build` (genera assets optimizados)
 
-## License
+## Rutas y API
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- `GET /` → Renderiza `welcome.blade.php`.
+- `POST /contact` → Envío de WhatsApp (`ContactController@sendWhatsApp`).
+
+Request (form-data o JSON):
+
+- `dial_code` (string, requerido, formato `+593`, `+34`, etc.)
+- `phone` (string, requerido, solo dígitos, 7–15 caracteres)
+- `message` (string, opcional, máximo 1000 caracteres)
+
+Respuesta (JSON):
+
+- Éxito: `{ success: true, message: "Mensaje enviado correctamente." }`
+- Error de validación: `{ success: false, message: "Datos inválidos.", errors: {...} }` (422)
+- Error de API: `{ success: false, message: "..." }` (código HTTP desde Evolution API)
+
+## Testing
+
+- Ejecuta pruebas: `php artisan test`.
+- Configura base de datos de pruebas si añades tests específicos.
+
+## Despliegue
+
+- En Apache, asegura que el DocumentRoot apunte al directorio `public/` del proyecto o accede vía `http://localhost/jinoxweb/public`.
+- Revisa permisos de almacenamiento: `storage/` y `bootstrap/cache` deben ser escribibles.
+- Genera assets de producción: `npm run build`.
+
+## Notas y buenas prácticas
+
+- Mantén `APP_ENV=production` y `APP_DEBUG=false` en producción.
+- No subas `.env` ni credenciales privadas al repositorio.
+- Actualiza `APP_URL` para reflejar el dominio real en despliegue.
+
+## Autor
+
+Portafolio de Jino Morales — Desarrollador Full Stack.
