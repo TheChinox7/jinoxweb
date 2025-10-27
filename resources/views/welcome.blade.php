@@ -50,7 +50,7 @@
                 </div>
 
                 <button class="info_more-btn" data-sidebar-btn>
-                    <span>Mostrar Contactos</span>
+                    <span>Ver Info</span>
                     <ion-icon name="chevron-down"></ion-icon>
                 </button>
             </div>
@@ -116,16 +116,28 @@
             <nav class="navbar">
                 <ul class="navbar-list">
                     <li class="navbar-item">
-                        <button class="navbar-link active" data-nav-link>Sobre mí</button>
+                        <button class="navbar-link active" data-nav-link>
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                            <span>Sobre mí</span>
+                        </button>
                     </li>
                     <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>Currículum</button>
+                        <button class="navbar-link" data-nav-link>
+                            <ion-icon name="document-text-outline"></ion-icon>
+                            <span>Currículum</span>
+                        </button>
                     </li>
                     <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>Portafolio</button>
+                        <button class="navbar-link" data-nav-link>
+                            <ion-icon name="briefcase-outline"></ion-icon>
+                            <span>Portafolio</span>
+                        </button>
                     </li>
                     <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>Contacto</button>
+                        <button class="navbar-link" data-nav-link>
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <span>Contacto</span>
+                        </button>
                     </li>
                 </ul>
             </nav>
@@ -264,14 +276,6 @@
                                 aseguramiento de calidad en el desarrollo de software.
                             </p>
                         </li>
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">Desarrollador Web Senior</h4>
-                            <span>2010 — 2013</span>
-                            <p class="timeline-text">
-                                Desarrollo de aplicaciones web complejas, implementación de soluciones frontend y backend,
-                                optimización de rendimiento y seguridad.
-                            </p>
-                        </li>
                     </ol>
                 </section>
 
@@ -325,297 +329,124 @@
 
             <!-- PORTFOLIO -->
             <article class="portfolio" data-page="portafolio">
+                <!-- Actualización (2025-10): Reestructuración de Portafolio en dos secciones.
+                     - Se eliminaron categorías y filtros.
+                     - Se agregaron tarjetas con imagen (min 400x300), título, descripción y botón "Ver".
+                     - El botón "Ver" prioriza producción y cae al repo si no existe (via data-* y JS).
+                     - Imágenes con lazy loading y dimensiones declaradas para rendimiento.
+                     - Mantener funcionalidades existentes no mencionadas.
+                -->
                 <header>
                     <h2 class="h2 article-title">Portafolio</h2>
                 </header>
 
-                <section class="projects">
-                    <ul class="filter-list">
-                        <li class="filter-item">
-                            <button class="active" data-filter-btn>All</button>
-                        </li>
-                        <li class="filter-item">
-                            <button data-filter-btn>Web design</button>
-                        </li>
-                        <li class="filter-item">
-                            <button data-filter-btn>Applications</button>
-                        </li>
-                        <li class="filter-item">
-                            <button data-filter-btn>Web development</button>
-                        </li>
-                    </ul>
+                <!-- Proyectos más populares -->
+                <section class="projects popular-projects">
+                    <h3 class="h3 section-subtitle">Proyectos más populares</h3>
 
-                    <div class="filter-select-box">
-                        <button class="filter-select" data-select>
-                            <div class="select-value" data-selecct-value>Select category</div>
-                            <div class="select-icon">
-                                <ion-icon name="chevron-down"></ion-icon>
+                    <ul class="project-grid primary">
+                        <li class="project-card">
+                            <figure class="project-media">
+                                <img src="/images/project-1.jpg" alt="Finance" loading="lazy" decoding="async" width="400" height="300">
+                            </figure>
+                            <div class="project-content">
+                                <h4 class="project-title">Finance</h4>
+                                <p class="project-description">Panel web para gestión financiera con análisis en tiempo real.</p>
+                                <a class="btn-view" href="#" data-prod-url="" data-repo-url="https://github.com/" aria-label="Ver Finance">Ver</a>
                             </div>
-                        </button>
-                        <ul class="select-list">
-                            <li class="select-item">
-                                <button data-select-item>All</button>
-                            </li>
-                            <li class="select-item">
-                                <button data-select-item>Web design</button>
-                            </li>
-                            <li class="select-item">
-                                <button data-select-item>Applications</button>
-                            </li>
-                            <li class="select-item">
-                                <button data-select-item>Web development</button>
-                            </li>
-                        </ul>
-                    </div>
+                        </li>
+                        <li class="project-card">
+                            <figure class="project-media">
+                                <img src="/images/project-2.png" alt="Orizon" loading="lazy" decoding="async" width="400" height="300">
+                            </figure>
+                            <div class="project-content">
+                                <h4 class="project-title">Orizon</h4>
+                                <p class="project-description">Landing moderna con secciones dinámicas y optimizada para SEO.</p>
+                                <a class="btn-view" href="#" data-prod-url="" data-repo-url="https://github.com/" aria-label="Ver Orizon">Ver</a>
+                            </div>
+                        </li>
+                        <li class="project-card">
+                            <figure class="project-media">
+                                <img src="/images/project-3.jpg" alt="Fundo" loading="lazy" decoding="async" width="400" height="300">
+                            </figure>
+                            <div class="project-content">
+                                <h4 class="project-title">Fundo</h4>
+                                <p class="project-description">Diseño web limpio con tipografías legibles y paleta amigable.</p>
+                                <a class="btn-view" href="#" data-prod-url="" data-repo-url="https://github.com/" aria-label="Ver Fundo">Ver</a>
+                            </div>
+                        </li>
+                        <li class="project-card">
+                            <figure class="project-media">
+                                <img src="/images/project-4.png" alt="Brawlhalla" loading="lazy" decoding="async" width="400" height="300">
+                            </figure>
+                            <div class="project-content">
+                                <h4 class="project-title">Brawlhalla</h4>
+                                <p class="project-description">App con componentes reutilizables y arquitectura modular.</p>
+                                <a class="btn-view" href="#" data-prod-url="" data-repo-url="https://github.com/" aria-label="Ver Brawlhalla">Ver</a>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
 
-                    <ul class="project-list">
-                        <li class="project-item active" data-filter-item data-category="web development">
-                            <a href="#">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-                                    <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                                </figure>
-                                <h3 class="project-title">Finance</h3>
-                                <p class="project-category">Web development</p>
-                            </a>
+                <!-- Otros proyectos -->
+                <section class="projects other-projects">
+                    <h3 class="h3 section-subtitle">Otros proyectos</h3>
+
+                    <ul class="project-grid secondary">
+                        <li class="project-card">
+                            <figure class="project-media">
+                                <img src="/images/project-5.png" alt="DSM" loading="lazy" decoding="async" width="400" height="300">
+                            </figure>
+                            <div class="project-content">
+                                <h4 class="project-title">DSM</h4>
+                                <p class="project-description">Sistema de diseño con componentes y tokens escalables.</p>
+                                <a class="btn-view" href="#" data-prod-url="" data-repo-url="https://github.com/" aria-label="Ver DSM">Ver</a>
+                            </div>
                         </li>
-                        <li class="project-item active" data-filter-item data-category="web development">
-                            <a href="#">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-                                    <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                                </figure>
-                                <h3 class="project-title">Orizon</h3>
-                                <p class="project-category">Web development</p>
-                            </a>
+                        <li class="project-card">
+                            <figure class="project-media">
+                                <img src="/images/project-6.png" alt="MetaSpark" loading="lazy" decoding="async" width="400" height="300">
+                            </figure>
+                            <div class="project-content">
+                                <h4 class="project-title">MetaSpark</h4>
+                                <p class="project-description">Sitio informativo con animaciones sutiles y rendimiento sólido.</p>
+                                <a class="btn-view" href="#" data-prod-url="" data-repo-url="https://github.com/" aria-label="Ver MetaSpark">Ver</a>
+                            </div>
                         </li>
-                        <li class="project-item active" data-filter-item data-category="web design">
-                            <a href="#">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-                                    <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                                </figure>
-                                <h3 class="project-title">Fundo</h3>
-                                <p class="project-category">Web design</p>
-                            </a>
+                        <li class="project-card">
+                            <figure class="project-media">
+                                <img src="/images/project-7.png" alt="Summary" loading="lazy" decoding="async" width="400" height="300">
+                            </figure>
+                            <div class="project-content">
+                                <h4 class="project-title">Summary</h4>
+                                <p class="project-description">Resumen de proyectos con tarjetas compactas y accesibles.</p>
+                                <a class="btn-view" href="#" data-prod-url="" data-repo-url="https://github.com/" aria-label="Ver Summary">Ver</a>
+                            </div>
                         </li>
-                        <li class="project-item active" data-filter-item data-category="applications">
-                            <a href="#">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-                                    <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                                </figure>
-                                <h3 class="project-title">Brawlhalla</h3>
-                                <p class="project-category">Applications</p>
-                            </a>
+                        <li class="project-card">
+                            <figure class="project-media">
+                                <img src="/images/project-8.jpg" alt="Task Manager" loading="lazy" decoding="async" width="400" height="300">
+                            </figure>
+                            <div class="project-content">
+                                <h4 class="project-title">Task Manager</h4>
+                                <p class="project-description">Gestor de tareas con filtros y vistas rápidas.</p>
+                                <a class="btn-view" href="#" data-prod-url="" data-repo-url="https://github.com/" aria-label="Ver Task Manager">Ver</a>
+                            </div>
                         </li>
-                        <li class="project-item active" data-filter-item data-category="web design">
-                            <a href="#">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-                                    <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                                </figure>
-                                <h3 class="project-title">DSM.</h3>
-                                <p class="project-category">Web design</p>
-                            </a>
-                        </li>
-                        <li class="project-item active" data-filter-item data-category="web design">
-                            <a href="#">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-                                    <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                                </figure>
-                                <h3 class="project-title">MetaSpark</h3>
-                                <p class="project-category">Web design</p>
-                            </a>
-                        </li>
-                        <li class="project-item active" data-filter-item data-category="web development">
-                            <a href="#">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-                                    <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                                </figure>
-                                <h3 class="project-title">Summary</h3>
-                                <p class="project-category">Web development</p>
-                            </a>
-                        </li>
-                        <li class="project-item active" data-filter-item data-category="applications">
-                            <a href="#">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-                                    <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                                </figure>
-                                <h3 class="project-title">Task Manager</h3>
-                                <p class="project-category">Applications</p>
-                            </a>
-                        </li>
-                        <li class="project-item active" data-filter-item data-category="web development">
-                            <a href="#">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-                                    <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                                </figure>
-                                <h3 class="project-title">Arrival</h3>
-                                <p class="project-category">Web development</p>
-                            </a>
+                        <li class="project-card">
+                            <figure class="project-media">
+                                <img src="/images/project-9.png" alt="Arrival" loading="lazy" decoding="async" width="400" height="300">
+                            </figure>
+                            <div class="project-content">
+                                <h4 class="project-title">Arrival</h4>
+                                <p class="project-description">Landing experimental con enfoque en microinteracciones.</p>
+                                <a class="btn-view" href="#" data-prod-url="" data-repo-url="https://github.com/" aria-label="Ver Arrival">Ver</a>
+                            </div>
                         </li>
                     </ul>
                 </section>
             </article>
 
-
-
-
-
-            <!-- BLOG -->
-            <article class="blog" data-page="blog">
-                <header>
-                    <h2 class="h2 article-title">Blog</h2>
-                </header>
-
-                <section class="blog-posts">
-                    <ul class="blog-posts-list">
-                        <li class="blog-post-item">
-                            <a href="#">
-                                <figure class="blog-banner-box">
-                                    <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022"
-                                        loading="lazy">
-                                </figure>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <p class="blog-category">Design</p>
-                                        <span class="dot"></span>
-                                        <time datetime="2022-02-23">Fab 23, 2022</time>
-                                    </div>
-                                    <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-                                    <p class="blog-text">
-                                        Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="blog-post-item">
-                            <a href="#">
-                                <figure class="blog-banner-box">
-                                    <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer"
-                                        loading="lazy">
-                                </figure>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <p class="blog-category">Design</p>
-                                        <span class="dot"></span>
-                                        <time datetime="2022-02-23">Fab 23, 2022</time>
-                                    </div>
-                                    <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-                                    <p class="blog-text">
-                                        Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="blog-post-item">
-                            <a href="#">
-                                <figure class="blog-banner-box">
-                                    <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                                </figure>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <p class="blog-category">Design</p>
-                                        <span class="dot"></span>
-                                        <time datetime="2022-02-23">Fab 23, 2022</time>
-                                    </div>
-                                    <h3 class="h3 blog-item-title">Design digest #80</h3>
-                                    <p class="blog-text">
-                                        Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam
-                                        corporis suscipit.
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="blog-post-item">
-                            <a href="#">
-                                <figure class="blog-banner-box">
-                                    <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week"
-                                        loading="lazy">
-                                </figure>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <p class="blog-category">Design</p>
-                                        <span class="dot"></span>
-                                        <time datetime="2022-02-23">Fab 23, 2022</time>
-                                    </div>
-                                    <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-                                    <p class="blog-text">
-                                        Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation
-                                        ullamco laboris nisi.
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="blog-post-item">
-                            <a href="#">
-                                <figure class="blog-banner-box">
-                                    <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing"
-                                        loading="lazy">
-                                </figure>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <p class="blog-category">Design</p>
-                                        <span class="dot"></span>
-                                        <time datetime="2022-02-23">Fab 23, 2022</time>
-                                    </div>
-                                    <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-                                    <p class="blog-text">
-                                        Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                        aliqua.
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="blog-post-item">
-                            <a href="#">
-                                <figure class="blog-banner-box">
-                                    <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                                </figure>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <p class="blog-category">Design</p>
-                                        <span class="dot"></span>
-                                        <time datetime="2022-02-23">Fab 23, 2022</time>
-                                    </div>
-                                    <h3 class="h3 blog-item-title">Design digest #79</h3>
-                                    <p class="blog-text">
-                                        Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </section>
-            </article>
 
 
 
@@ -627,29 +458,39 @@
                     <h2 class="h2 article-title">Contacto</h2>
                 </header>
 
-                <section class="mapbox" data-mapbox>
-                    <figure>
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-                            width="400" height="300" loading="lazy"></iframe>
-                    </figure>
-                </section>
-
                 <section class="contact-form">
-                    <h3 class="h3 form-title">Contact Form</h3>
-                    <form action="#" class="form" data-form>
-                        <div class="input-wrapper">
-                            <input type="text" name="fullname" class="form-input" placeholder="Full name" required
-                                data-form-input>
-                            <input type="email" name="email" class="form-input" placeholder="Email address" required
-                                data-form-input>
+                    <h3 class="h3 form-title">WhatsApp</h3>
+
+                    <div class="wa-header">
+                        <div class="wa-icon" aria-hidden="true">
+                            <ion-icon name="logo-whatsapp"></ion-icon>
                         </div>
-                        <textarea name="message" class="form-input" placeholder="Your Message" required
-                            data-form-input></textarea>
-                        <button class="form-btn" type="submit" disabled data-form-btn>
-                            <ion-icon name="paper-plane"></ion-icon>
-                            <span>Send Message</span>
-                        </button>
+                        <p class="wa-subtitle">Te contactaré inmediatamente por WhatsApp</p>
+                    </div>
+
+
+                    <form id="waForm" class="wa-form" action="{{ route('contact.whatsapp') }}" method="POST">
+                        @csrf
+                        <div class="wa-grid">
+                            <div class="wa-field">
+                                <label for="waCountry" class="wa-label">País</label>
+                                <select id="waCountry" name="dial_code" class="wa-select" aria-label="Selecciona tu país" required>
+                                    <option value="+593">Ecuador (+593)</option>
+                                </select>
+                            </div>
+                            <div class="wa-field">
+                                <label for="waPhone" class="wa-label">Número telefónico</label>
+                                <input id="waPhone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" pattern="^[0-9]{7,15}$" class="wa-input" placeholder="Solo dígitos" required />
+                            </div>
+                        </div>
+
+                        <div class="wa-actions">
+                            <button id="waSubmit" type="submit" class="wa-btn" aria-label="Enviar por WhatsApp">
+                                <ion-icon name="paper-plane"></ion-icon>
+                                <span>Enviar por WhatsApp</span>
+                            </button>
+                            <div id="waStatus" class="wa-status" role="status" aria-live="polite"></div>
+                        </div>
                     </form>
                 </section>
             </article>
@@ -661,32 +502,32 @@
 
     <!-- Sincronización de menú y secciones -->
     <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const navLinks = document.querySelectorAll('[data-nav-link]');
-        const pages = document.querySelectorAll('[data-page]');
-        const sectionMap = {
-            'Sobre mí': 'sobre-mi',
-            'Currículum': 'curriculum',
-            'Portafolio': 'portafolio',
-            'Contacto': 'contacto'
-        };
-        navLinks.forEach(link => {
-            link.addEventListener('click', function () {
-                // Quitar clase active de todos los links
-                navLinks.forEach(l => l.classList.remove('active'));
-                // Agregar clase active al link clicado
-                this.classList.add('active');
-                // Ocultar todas las secciones
-                pages.forEach(page => page.classList.remove('active'));
-                // Mostrar la sección correspondiente
-                const pageName = sectionMap[this.textContent.trim()];
-                const targetPage = document.querySelector(`[data-page="${pageName}"]`);
-                if (targetPage) {
-                    targetPage.classList.add('active');
-                }
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('[data-nav-link]');
+            const pages = document.querySelectorAll('[data-page]');
+            const sectionMap = {
+                'Sobre mí': 'sobre-mi',
+                'Currículum': 'curriculum',
+                'Portafolio': 'portafolio',
+                'Contacto': 'contacto'
+            };
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    // Quitar clase active de todos los links
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    // Agregar clase active al link clicado
+                    this.classList.add('active');
+                    // Ocultar todas las secciones
+                    pages.forEach(page => page.classList.remove('active'));
+                    // Mostrar la sección correspondiente
+                    const pageName = sectionMap[this.textContent.trim()];
+                    const targetPage = document.querySelector(`[data-page="${pageName}"]`);
+                    if (targetPage) {
+                        targetPage.classList.add('active');
+                    }
+                });
             });
         });
-    });
     </script>
 
     <!-- IONICONS -->
