@@ -21,7 +21,7 @@
 
     <!-- FAVICON -->
     {{-- cambiar --}}
-    <link rel="shortcut icon" href="{{ asset('images/logo.ico')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('images/my-avatar.png')}}" type="image/x-icon">
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('css/style.css')}}">
@@ -41,12 +41,12 @@
             <div class="sidebar-info">
                 <figure class="avatar-box">
                     {{-- cambiar --}}
-                    <img src="{{ asset('images/my-avatar.png')}}" alt="Jino Morales" width="80">
+                    <img src="{{ asset('images/Foto Jino 2.png')}}" alt="Jino Morales" width="80">
                 </figure>
 
                 <div class="info-content">
                     <h1 class="name" title="Jino Morales">Jino Morales</h1>
-                    <p class="title">Desarrollador FullStack</p>
+                    <p class="title">Full Stack & Líder Técnico</p>
                 </div>
 
                 <button class="info_more-btn" data-sidebar-btn>
@@ -96,14 +96,20 @@
 
                 <ul class="social-list">
                     <li class="social-item">
-                        <a href="https://www.linkedin.com/in/jinomorales" class="social-link" target="_blank">
+                        <a href="https://www.linkedin.com/in/jino-morales/" class="social-link" target="_blank">
                             <ion-icon name="logo-linkedin"></ion-icon>
                         </a>
                     </li>
 
                     <li class="social-item">
-                        <a href="https://github.com/jinomorales" class="social-link" target="_blank">
+                        <a href="https://github.com/TheChinox7" class="social-link" target="_blank">
                             <ion-icon name="logo-github"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li class="social-item">
+                        <a href="{{ asset('CV Jino Morales.pdf') }}" class="social-link" target="_blank" aria-label="Ver CV en PDF">
+                            <ion-icon name="document-outline"></ion-icon>
                         </a>
                     </li>
                 </ul>
@@ -150,11 +156,11 @@
 
                 <section class="about-text">
                     <p style="text-align: justify;">
-                        Soy un desarrollador Full Stack radicado en Quito, Ecuador, con amplia experiencia en el diseño y desarrollo de aplicaciones web a medida. Me especializo en transformar ideas y requisitos complejos en soluciones tecnológicas eficientes, escalables y centradas en la experiencia del usuario.
+                        Full Stack Developer y Líder Técnico con más de 5 años desarrollando plataformas SaaS, sistemas a medida y soluciones escalables. Experto en PHP (Laravel), Node.js y arquitectura backend. Orientado a resultados y a entregar software estable, documentado y mantenible.
                     </p>
 
                     <p style="text-align: justify;">
-                        Mi enfoque consiste en construir plataformas funcionales, seguras y visualmente atractivas, aplicando las mejores prácticas en arquitectura, UI/UX y rendimiento. He participado en una variedad de proyectos tanto para empresas consolidadas como para startups, aportando no solo desarrollo técnico, sino también visión estratégica para el crecimiento digital.
+                        He trabajado tanto en empresas como de forma freelance liderando equipos, definiendo arquitectura, integrando APIs y optimizando rendimiento. Enfocado en buenas prácticas, seguridad y experiencia de usuario.
                     </p>
                 </section>
 
@@ -233,20 +239,9 @@
 
                     <ol class="timeline-list">
                         <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">Universidad de las Artes</h4>
-                            <span>2007 — 2008</span>
-                            <p class="timeline-text">
-                                Estudios especializados en diseño digital y medios interactivos, con énfasis en interfaces
-                                de usuario y experiencia de usuario.
-                            </p>
-                        </li>
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">Academia de Arte Digital</h4>
-                            <span>2006 — 2007</span>
-                            <p class="timeline-text">
-                                Formación en diseño web, principios de usabilidad y accesibilidad web, y mejores prácticas
-                                de desarrollo frontend.
-                            </p>
+                            <h4 class="h4 timeline-item-title">INSTITUTO SUPERIOR TENA</h4>
+                            <span>—</span>
+                            <p class="timeline-text">Tecnólogo Superior en Desarrollo de Software.</p>
                         </li>
                     </ol>
                 </section>
@@ -261,63 +256,60 @@
 
                     <ol class="timeline-list">
                         <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">Director de Tecnología</h4>
-                            <span>2015 — Presente</span>
-                            <p class="timeline-text">
-                                Liderazgo de equipos de desarrollo, arquitectura de sistemas y gestión de proyectos
-                                tecnológicos. Implementación de metodologías ágiles y mejores prácticas de desarrollo.
-                            </p>
+                            <h4 class="h4 timeline-item-title">Desarrollo Full Stack — Makrocomp</h4>
+                            <span>2019 — 2022</span>
+                            <p class="timeline-text">Desarrollador Full Stack y analista encargado del desarrollo y liderazgo técnico de la plataforma Makrocomp y sus sistemas derivados.</p>
                         </li>
                         <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">Director de Desarrollo</h4>
-                            <span>2013 — 2015</span>
-                            <p class="timeline-text">
-                                Gestión de proyectos de desarrollo web y móvil, supervisión de equipos técnicos y
-                                aseguramiento de calidad en el desarrollo de software.
-                            </p>
+                            <h4 class="h4 timeline-item-title">Freelance — Desarrollador Full Stack</h4>
+                            <span>2022 — 2025</span>
+                            <p class="timeline-text">Proyectos web para diversos clientes, desarrollo de tesis de pregrado y posgrado, y capacitaciones técnicas en tecnología y desarrollo web.</p>
                         </li>
                     </ol>
                 </section>
 
-                <!-- SKILLS SECTION -->
                 <section class="skill">
-                    <h3 class="h3 skills-title">Mis habilidades</h3>
+                    <h3 class="h3 skills-title">Tecnologías</h3>
                     <ul class="skills-list content-card">
                         <li class="skills-item">
                             <div class="title-wrapper">
-                                <h5 class="h5">Diseño Web</h5>
+                                <h5 class="h5">Frontend</h5>
                                 <data value="80">80%</data>
                             </div>
                             <div class="skill-progress-bg">
                                 <div class="skill-progress-fill" style="width: 80%;"></div>
                             </div>
+                            <p>HTML5, CSS3, JavaScript, React, Vue.js</p>
                         </li>
                         <li class="skills-item">
                             <div class="title-wrapper">
-                                <h5 class="h5">Graphic design</h5>
-                                <data value="70">70%</data>
-                            </div>
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 70%;"></div>
-                            </div>
-                        </li>
-                        <li class="skills-item">
-                            <div class="title-wrapper">
-                                <h5 class="h5">Branding</h5>
+                                <h5 class="h5">Backend</h5>
                                 <data value="90">90%</data>
                             </div>
                             <div class="skill-progress-bg">
                                 <div class="skill-progress-fill" style="width: 90%;"></div>
                             </div>
+                            <p>PHP (Laravel), Node.js, Python (Django), Java (Spring)</p>
                         </li>
                         <li class="skills-item">
                             <div class="title-wrapper">
-                                <h5 class="h5">WordPress</h5>
-                                <data value="50">50%</data>
+                                <h5 class="h5">Bases de Datos</h5>
+                                <data value="85">85%</data>
                             </div>
                             <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 50%;"></div>
+                                <div class="skill-progress-fill" style="width: 85%;"></div>
                             </div>
+                            <p>MySQL, PostgreSQL, MongoDB</p>
+                        </li>
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <h5 class="h5">Infraestructura</h5>
+                                <data value="75">75%</data>
+                            </div>
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 75%;"></div>
+                            </div>
+                            <p>Docker, Git, AWS</p>
                         </li>
                     </ul>
                 </section>
@@ -329,13 +321,6 @@
 
             <!-- PORTFOLIO -->
             <article class="portfolio" data-page="portafolio">
-                <!-- Actualización (2025-10): Reestructuración de Portafolio en dos secciones.
-                     - Se eliminaron categorías y filtros.
-                     - Se agregaron tarjetas con imagen (min 400x300), título, descripción y botón "Ver".
-                     - El botón "Ver" prioriza producción y cae al repo si no existe (via data-* y JS).
-                     - Imágenes con lazy loading y dimensiones declaradas para rendimiento.
-                     - Mantener funcionalidades existentes no mencionadas.
-                -->
                 <header>
                     <h2 class="h2 article-title">Portafolio</h2>
                 </header>
@@ -347,42 +332,12 @@
                     <ul class="project-grid primary">
                         <li class="project-card">
                             <figure class="project-media">
-                                <img src="/images/project-1.jpg" alt="Finance" loading="lazy" decoding="async" width="400" height="300">
+                                <img src="{{asset('/proyectos/apiconsult.png')}}" alt="Apiconsult" loading="lazy" decoding="async" width="400" height="300">
                             </figure>
                             <div class="project-content">
-                                <h4 class="project-title">Finance</h4>
-                                <p class="project-description">Panel web para gestión financiera con análisis en tiempo real.</p>
-                                <a class="btn-view" href="#" data-prod-url="" data-repo-url="https://github.com/" aria-label="Ver Finance">Ver</a>
-                            </div>
-                        </li>
-                        <li class="project-card">
-                            <figure class="project-media">
-                                <img src="/images/project-2.png" alt="Orizon" loading="lazy" decoding="async" width="400" height="300">
-                            </figure>
-                            <div class="project-content">
-                                <h4 class="project-title">Orizon</h4>
-                                <p class="project-description">Landing moderna con secciones dinámicas y optimizada para SEO.</p>
-                                <a class="btn-view" href="#" data-prod-url="" data-repo-url="https://github.com/" aria-label="Ver Orizon">Ver</a>
-                            </div>
-                        </li>
-                        <li class="project-card">
-                            <figure class="project-media">
-                                <img src="/images/project-3.jpg" alt="Fundo" loading="lazy" decoding="async" width="400" height="300">
-                            </figure>
-                            <div class="project-content">
-                                <h4 class="project-title">Fundo</h4>
-                                <p class="project-description">Diseño web limpio con tipografías legibles y paleta amigable.</p>
-                                <a class="btn-view" href="#" data-prod-url="" data-repo-url="https://github.com/" aria-label="Ver Fundo">Ver</a>
-                            </div>
-                        </li>
-                        <li class="project-card">
-                            <figure class="project-media">
-                                <img src="/images/project-4.png" alt="Brawlhalla" loading="lazy" decoding="async" width="400" height="300">
-                            </figure>
-                            <div class="project-content">
-                                <h4 class="project-title">Brawlhalla</h4>
-                                <p class="project-description">App con componentes reutilizables y arquitectura modular.</p>
-                                <a class="btn-view" href="#" data-prod-url="" data-repo-url="https://github.com/" aria-label="Ver Brawlhalla">Ver</a>
+                                <h4 class="project-title">Apiconsult</h4>
+                                <p class="project-description">LA API MÁS CONFIABLE DE ECUADOR.</p>
+                                <a class="btn-view" href="#" data-prod-url="https://apiconsult.zampisoft.com/" data-repo-url="" aria-label="Ver Apiconsult">Ver</a>
                             </div>
                         </li>
                     </ul>
@@ -395,52 +350,12 @@
                     <ul class="project-grid secondary">
                         <li class="project-card">
                             <figure class="project-media">
-                                <img src="/images/project-5.png" alt="DSM" loading="lazy" decoding="async" width="400" height="300">
+                                <img src="{{asset('/proyectos/sedifax.png')}}" alt="Sedifax" loading="lazy" decoding="async" width="400" height="300">
                             </figure>
                             <div class="project-content">
-                                <h4 class="project-title">DSM</h4>
-                                <p class="project-description">Sistema de diseño con componentes y tokens escalables.</p>
-                                <a class="btn-view" href="#" data-prod-url="" data-repo-url="https://github.com/" aria-label="Ver DSM">Ver</a>
-                            </div>
-                        </li>
-                        <li class="project-card">
-                            <figure class="project-media">
-                                <img src="/images/project-6.png" alt="MetaSpark" loading="lazy" decoding="async" width="400" height="300">
-                            </figure>
-                            <div class="project-content">
-                                <h4 class="project-title">MetaSpark</h4>
-                                <p class="project-description">Sitio informativo con animaciones sutiles y rendimiento sólido.</p>
-                                <a class="btn-view" href="#" data-prod-url="" data-repo-url="https://github.com/" aria-label="Ver MetaSpark">Ver</a>
-                            </div>
-                        </li>
-                        <li class="project-card">
-                            <figure class="project-media">
-                                <img src="/images/project-7.png" alt="Summary" loading="lazy" decoding="async" width="400" height="300">
-                            </figure>
-                            <div class="project-content">
-                                <h4 class="project-title">Summary</h4>
-                                <p class="project-description">Resumen de proyectos con tarjetas compactas y accesibles.</p>
-                                <a class="btn-view" href="#" data-prod-url="" data-repo-url="https://github.com/" aria-label="Ver Summary">Ver</a>
-                            </div>
-                        </li>
-                        <li class="project-card">
-                            <figure class="project-media">
-                                <img src="/images/project-8.jpg" alt="Task Manager" loading="lazy" decoding="async" width="400" height="300">
-                            </figure>
-                            <div class="project-content">
-                                <h4 class="project-title">Task Manager</h4>
-                                <p class="project-description">Gestor de tareas con filtros y vistas rápidas.</p>
-                                <a class="btn-view" href="#" data-prod-url="" data-repo-url="https://github.com/" aria-label="Ver Task Manager">Ver</a>
-                            </div>
-                        </li>
-                        <li class="project-card">
-                            <figure class="project-media">
-                                <img src="/images/project-9.png" alt="Arrival" loading="lazy" decoding="async" width="400" height="300">
-                            </figure>
-                            <div class="project-content">
-                                <h4 class="project-title">Arrival</h4>
-                                <p class="project-description">Landing experimental con enfoque en microinteracciones.</p>
-                                <a class="btn-view" href="#" data-prod-url="" data-repo-url="https://github.com/" aria-label="Ver Arrival">Ver</a>
+                                <h4 class="project-title">Sedifax</h4>
+                                <p class="project-description">Plataforma de ventas.</p>
+                                <a class="btn-view" href="#" data-prod-url="https://sedifax.com/home" data-repo-url="" aria-label="Ver Sedifax">Ver</a>
                             </div>
                         </li>
                     </ul>

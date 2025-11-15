@@ -343,7 +343,7 @@ main {
 
 .sidebar {
   margin-bottom: 15px;
-  max-height: 112px;
+  max-height: 125px;
   overflow: hidden;
   transition: var(--transition-2);
 }
@@ -362,7 +362,21 @@ main {
 
 .avatar-box {
   background: var(--bg-gradient-onyx);
-  border-radius: 20px;
+  border-radius: 50%;
+  width: 96px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.avatar-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1 / 1;
 }
 
 .info-content .name {
@@ -949,6 +963,10 @@ main {
   padding: 20px;
 }
 
+.skill .skills-item p {
+  color: var(--white-2);
+}
+
 
 .skills-item:not(:last-child) {
   margin-bottom: 15px;
@@ -1471,11 +1489,14 @@ textarea.form-input::-webkit-resizer {
   }
 
   .avatar-box {
-    border-radius: 30px;
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
   }
 
   .avatar-box img {
-    width: 120px;
+    width: 100%;
+    height: 100%;
   }
 
   .info-content .name {
@@ -2281,8 +2302,9 @@ textarea.form-input::-webkit-resizer {
     flex-direction: column;
   }
 
-  .avatar-box img {
+  .avatar-box {
     width: 150px;
+    height: 150px;
   }
 
   .info-content .name {
