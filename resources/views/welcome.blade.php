@@ -358,6 +358,28 @@
                                 <a class="btn-view" href="#" data-prod-url="https://sedifax.com/home" data-repo-url="" aria-label="Ver Sedifax">Ver</a>
                             </div>
                         </li>
+
+                        <li class="project-card">
+                            <figure class="project-media">
+                                <img src="{{asset('/proyectos/defect.jpg')}}" alt="Gestion de Documentos" loading="lazy" decoding="async" width="400" height="300">
+                            </figure>
+                            <div class="project-content">
+                                <h4 class="project-title">Gestion de Documentos</h4>
+                                <p class="project-description">Plataforma de gestión de documentos.</p>
+                                <a class="btn-view" href="#" data-prod-url="" data-repo-url="https://github.com/TheChinox7/gesti-n-de-documentos.git" aria-label="Ver Tesis - Gestion de Documentos">Ver</a>
+                            </div>
+                        </li>
+
+                        <li class="project-card">
+                            <figure class="project-media">
+                                <img src="{{asset('/proyectos/defect.jpg')}}" alt="Creador de Silabos" loading="lazy" decoding="async" width="400" height="300">
+                            </figure>
+                            <div class="project-content">
+                                <h4 class="project-title">Creador de Silabos</h4>
+                                <p class="project-description">Plataforma de creación de silabos.</p>
+                                <a class="btn-view" href="#" data-prod-url="" data-repo-url="https://github.com/TheChinox7/creador-de-silabos-web.git" aria-label="Ver Creador de Silabos">Ver</a>
+                            </div>
+                        </li>
                     </ul>
                 </section>
             </article>
