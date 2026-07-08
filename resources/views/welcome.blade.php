@@ -5,23 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jino Morales - Desarrollador FullStack | Portafolio Profesional</title>
+    <title>Jino Morales | Desarrollador Full Stack y Líder Técnico en Ecuador - Latinsoft</title>
     <meta name="description"
-        content="Portafolio profesional de Jino Morales, Desarrollador FullStack con experiencia en desarrollo web y aplicaciones. Conozca mis proyectos y habilidades.">
-    <meta name="keywords"
-        content="Jino Morales, desarrollador fullstack, portafolio, desarrollo web, Ecuador, programador, frontend, backend">
+        content="Portafolio profesional de Jino Morales en Latinsoft.cloud: desarrollo de software Full Stack, arquitectura backend, integración de APIs y soluciones SaaS para empresas en Ecuador y LATAM.">
+    <meta name="keywords" content="Jino Morales, Latinsoft, desarrollador full stack Ecuador, líder técnico, Laravel, Node.js, portafolio, arquitectura de software, APIs, SaaS">
     <meta name="author" content="Jino Morales">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Jino Morales - Desarrollador FullStack">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="theme-color" content="#111827">
+    <meta name="geo.region" content="EC">
+    <meta name="geo.placename" content="Quito">
+    <link rel="canonical" href="https://latinsoft.cloud/">
+    <link rel="alternate" hreflang="es-EC" href="https://latinsoft.cloud/">
+    <link rel="alternate" hreflang="x-default" href="https://latinsoft.cloud/">
+    <link rel="sitemap" type="application/xml" href="https://latinsoft.cloud/sitemap.xml">
+
+    <meta property="og:title" content="Jino Morales | Desarrollador Full Stack y Líder Técnico en Ecuador">
     <meta property="og:description"
-        content="Portafolio profesional de Jino Morales, Desarrollador FullStack con experiencia en desarrollo web y aplicaciones.">
+        content="Portafolio profesional en Latinsoft.cloud: desarrollo Full Stack, liderazgo técnico, integración de APIs y soluciones de software a medida.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jinomorales.com/">
-    <meta property="og:image" content="./assets/images/my-avatar.png">
+    <meta property="og:url" content="https://latinsoft.cloud/">
+    <meta property="og:site_name" content="Latinsoft">
+    <meta property="og:locale" content="es_EC">
+    <meta property="og:image" content="https://latinsoft.cloud/images/my-avatar.png">
+    <meta property="og:image:alt" content="Foto de perfil de Jino Morales, desarrollador Full Stack y líder técnico">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jino Morales | Desarrollador Full Stack y Líder Técnico en Ecuador">
+    <meta name="twitter:description" content="Portafolio profesional en Latinsoft.cloud con proyectos SaaS, experiencia técnica y contacto directo.">
+    <meta name="twitter:image" content="https://latinsoft.cloud/images/my-avatar.png">
 
     <!-- FAVICON -->
-    {{-- cambiar --}}
-    <link rel="shortcut icon" href="{{ asset('images/my-avatar.png')}}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('images/my-avatar.png') }}" type="image/png">
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('css/style.css')}}">
@@ -40,13 +54,12 @@
         <aside class="sidebar" data-sidebar>
             <div class="sidebar-info">
                 <figure class="avatar-box">
-                    {{-- cambiar --}}
-                    <img src="{{ asset('images/Foto Jino 2.png')}}" alt="Jino Morales" width="80">
+                    <img src="{{ asset('images/Foto Jino 2.png') }}" alt="Jino Morales" width="80" loading="eager" fetchpriority="high">
                 </figure>
 
                 <div class="info-content">
                     <h1 class="name" title="Jino Morales">Jino Morales</h1>
-                    <p class="title">Full Stack & Líder Técnico</p>
+                    <p class="title">Desarrollador Full Stack y Líder Técnico</p>
                 </div>
 
                 <button class="info_more-btn" data-sidebar-btn>
@@ -61,7 +74,7 @@
                 <ul class="contacts-list">
                     <li class="contact-item">
                         <div class="icon-box">
-                            <ion-icon name="mail-outline"></ion-icon>
+                            <ion-icon name="mail"></ion-icon>
                         </div>
                         <div class="contact-info">
                             <p class="contact-title">Correo</p>
@@ -72,18 +85,18 @@
 
                     <li class="contact-item">
                         <div class="icon-box">
-                            <ion-icon name="phone-portrait-outline"></ion-icon>
+                            <ion-icon name="call"></ion-icon>
                         </div>
                         <div class="contact-info">
                             <p class="contact-title">Teléfono</p>
-                            <a href="tel:+593962894078" class="contact-link">+593 962894078</a>
+                            <a href="tel:+593987223133" class="contact-link">+593 987223133</a>
                         </div>
                     </li>
 
 
                     <li class="contact-item">
                         <div class="icon-box">
-                            <ion-icon name="location-outline"></ion-icon>
+                            <ion-icon name="location"></ion-icon>
                         </div>
                         <div class="contact-info">
                             <p class="contact-title">Ubicación</p>
@@ -96,19 +109,19 @@
 
                 <ul class="social-list">
                     <li class="social-item">
-                        <a href="https://www.linkedin.com/in/jino-morales/" class="social-link" target="_blank">
+                        <a href="https://www.linkedin.com/in/jino-morales/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Perfil de LinkedIn de Jino Morales">
                             <ion-icon name="logo-linkedin"></ion-icon>
                         </a>
                     </li>
 
                     <li class="social-item">
-                        <a href="https://github.com/TheChinox7" class="social-link" target="_blank">
+                        <a href="https://github.com/TheChinox7" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Perfil de GitHub de Jino Morales">
                             <ion-icon name="logo-github"></ion-icon>
                         </a>
                     </li>
 
                     <li class="social-item">
-                        <a href="{{ asset('CV Jino Morales.pdf') }}" class="social-link" target="_blank" aria-label="Ver CV en PDF">
+                        <a href="{{ asset('CV Jino Morales.pdf') }}" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Ver CV en PDF">
                             <ion-icon name="document-outline"></ion-icon>
                         </a>
                     </li>
@@ -123,25 +136,25 @@
                 <ul class="navbar-list">
                     <li class="navbar-item">
                         <button class="navbar-link active" data-nav-link>
-                            <ion-icon name="person-circle-outline"></ion-icon>
+                            <ion-icon name="person-circle"></ion-icon>
                             <span>Sobre mí</span>
                         </button>
                     </li>
                     <li class="navbar-item">
                         <button class="navbar-link" data-nav-link>
-                            <ion-icon name="document-text-outline"></ion-icon>
+                            <ion-icon name="document-text"></ion-icon>
                             <span>Currículum</span>
                         </button>
                     </li>
                     <li class="navbar-item">
                         <button class="navbar-link" data-nav-link>
-                            <ion-icon name="briefcase-outline"></ion-icon>
+                            <ion-icon name="briefcase"></ion-icon>
                             <span>Portafolio</span>
                         </button>
                     </li>
                     <li class="navbar-item">
                         <button class="navbar-link" data-nav-link>
-                            <ion-icon name="mail-outline"></ion-icon>
+                            <ion-icon name="mail"></ion-icon>
                             <span>Contacto</span>
                         </button>
                     </li>
@@ -156,11 +169,11 @@
 
                 <section class="about-text">
                     <p style="text-align: justify;">
-                        Full Stack Developer y Líder Técnico con más de 5 años desarrollando plataformas SaaS, sistemas a medida y soluciones escalables. Experto en PHP (Laravel), Node.js y arquitectura backend. Orientado a resultados y a entregar software estable, documentado y mantenible.
+                        Desarrollador Full Stack y Líder Técnico con más de 5 años de experiencia diseñando y desarrollando plataformas SaaS, sistemas empresariales a medida y soluciones escalables. Especializado en PHP (Laravel), Node.js y arquitectura backend orientada a rendimiento, seguridad y mantenibilidad.
                     </p>
 
                     <p style="text-align: justify;">
-                        He trabajado tanto en empresas como de forma freelance liderando equipos, definiendo arquitectura, integrando APIs y optimizando rendimiento. Enfocado en buenas prácticas, seguridad y experiencia de usuario.
+                        He trabajado en entornos corporativos y como consultor freelance, liderando equipos, definiendo arquitectura de software, integrando APIs críticas y optimizando procesos de negocio. Mi enfoque combina buenas prácticas de desarrollo, documentación clara y una experiencia de usuario consistente.
                     </p>
                 </section>
 
@@ -175,7 +188,7 @@
                             <div class="service-content-box">
                                 <h4 class="h4 service-item-title">Diseño web</h4>
                                 <p class="service-item-text">
-                                    Diseño moderno y de alta calidad realizado a nivel profesional.
+                                    Diseño de interfaces web modernas, usables y enfocadas en conversión.
                                 </p>
                             </div>
                         </li>
@@ -187,7 +200,7 @@
                             <div class="service-content-box">
                                 <h4 class="h4 service-item-title">Desarrollo web</h4>
                                 <p class="service-item-text">
-                                    Desarrollo de sitios web de alta calidad a nivel profesional.
+                                    Desarrollo de aplicaciones web robustas, escalables y listas para producción.
                                 </p>
                             </div>
                         </li>
@@ -199,7 +212,7 @@
                             <div class="service-content-box">
                                 <h4 class="h4 service-item-title">Aplicaciones móviles</h4>
                                 <p class="service-item-text">
-                                    Desarrollo profesional de aplicaciones para iOS y Android.
+                                    Implementación de soluciones móviles conectadas a servicios backend seguros.
                                 </p>
                             </div>
                         </li>
@@ -211,7 +224,7 @@
                             <div class="service-content-box">
                                 <h4 class="h4 service-item-title">Integración de APIs</h4>
                                 <p class="service-item-text">
-                                    Integración de APIs (REST/SOAP), automatización y conexión entre sistemas.
+                                    Integración de APIs REST/SOAP, automatización de flujos y conexión entre plataformas.
                                 </p>
                             </div>
                         </li>
@@ -240,7 +253,7 @@
                     <ol class="timeline-list">
                         <li class="timeline-item">
                             <h4 class="h4 timeline-item-title">INSTITUTO SUPERIOR TENA</h4>
-                            <span>—</span>
+                            <span>2019 — 2023</span>
                             <p class="timeline-text">Tecnólogo Superior en Desarrollo de Software.</p>
                         </li>
                     </ol>
@@ -258,58 +271,85 @@
                         <li class="timeline-item">
                             <h4 class="h4 timeline-item-title">Desarrollo Full Stack — Makrocomp</h4>
                             <span>2019 — 2022</span>
-                            <p class="timeline-text">Desarrollador Full Stack y analista encargado del desarrollo y liderazgo técnico de la plataforma Makrocomp y sus sistemas derivados.</p>
+                            <p class="timeline-text">Responsable del análisis, desarrollo y liderazgo técnico de la plataforma Makrocomp y sistemas derivados, con enfoque en estabilidad operativa y evolución continua del producto.</p>
                         </li>
                         <li class="timeline-item">
                             <h4 class="h4 timeline-item-title">Freelance — Desarrollador Full Stack</h4>
-                            <span>2022 — 2025</span>
-                            <p class="timeline-text">Proyectos web para diversos clientes, desarrollo de tesis de pregrado y posgrado, y capacitaciones técnicas en tecnología y desarrollo web.</p>
+                            <span>2022 — Actualidad</span>
+                            <p class="timeline-text">Desarrollo de soluciones web para múltiples clientes, consultoría técnica, automatización de procesos e implementación de proyectos académicos y empresariales con estándares profesionales.</p>
                         </li>
                     </ol>
                 </section>
 
                 <section class="skill">
                     <h3 class="h3 skills-title">Tecnologías</h3>
+                    <p class="skills-intro">
+                        Stack técnico orientado a construir productos escalables, mantenibles y listos para producción.
+                    </p>
                     <ul class="skills-list content-card">
                         <li class="skills-item">
                             <div class="title-wrapper">
-                                <h5 class="h5">Frontend</h5>
-                                <data value="80">80%</data>
+                                <h5 class="h5">Backend y Arquitectura</h5>
+                                <data value="92">92%</data>
                             </div>
                             <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 80%;"></div>
+                                <div class="skill-progress-fill" style="width: 92%;"></div>
                             </div>
-                            <p>HTML5, CSS3, JavaScript, React, Vue.js</p>
+                            <p>Laravel, Node.js, diseño de APIs, arquitectura modular y servicios escalables.</p>
+                            <ul class="skills-tags">
+                                <li>PHP</li>
+                                <li>Laravel</li>
+                                <li>Node.js</li>
+                                <li>REST / SOAP</li>
+                            </ul>
                         </li>
                         <li class="skills-item">
                             <div class="title-wrapper">
-                                <h5 class="h5">Backend</h5>
-                                <data value="90">90%</data>
+                                <h5 class="h5">Frontend y UX Funcional</h5>
+                                <data value="84">84%</data>
                             </div>
                             <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 90%;"></div>
+                                <div class="skill-progress-fill" style="width: 84%;"></div>
                             </div>
-                            <p>PHP (Laravel), Node.js, Python (Django), Java (Spring)</p>
+                            <p>Interfaces modernas, responsivas y enfocadas en experiencia de usuario y negocio.</p>
+                            <ul class="skills-tags">
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>JavaScript</li>
+                                <li>React / Vue</li>
+                            </ul>
                         </li>
                         <li class="skills-item">
                             <div class="title-wrapper">
-                                <h5 class="h5">Bases de Datos</h5>
-                                <data value="85">85%</data>
+                                <h5 class="h5">Datos y Persistencia</h5>
+                                <data value="88">88%</data>
                             </div>
                             <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 85%;"></div>
+                                <div class="skill-progress-fill" style="width: 88%;"></div>
                             </div>
-                            <p>MySQL, PostgreSQL, MongoDB</p>
+                            <p>Modelado y optimización de bases de datos para rendimiento, trazabilidad y crecimiento.</p>
+                            <ul class="skills-tags">
+                                <li>MySQL</li>
+                                <li>PostgreSQL</li>
+                                <li>MongoDB</li>
+                                <li>SQL Optimization</li>
+                            </ul>
                         </li>
                         <li class="skills-item">
                             <div class="title-wrapper">
-                                <h5 class="h5">Infraestructura</h5>
-                                <data value="75">75%</data>
+                                <h5 class="h5">Infraestructura y Entrega</h5>
+                                <data value="82">82%</data>
                             </div>
                             <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 75%;"></div>
+                                <div class="skill-progress-fill" style="width: 82%;"></div>
                             </div>
-                            <p>Docker, Git, AWS</p>
+                            <p>Despliegue y operación técnica con prácticas de versionado, contenedores y cloud.</p>
+                            <ul class="skills-tags">
+                                <li>Docker</li>
+                                <li>Git</li>
+                                <li>AWS</li>
+                                <li>CI/CD</li>
+                            </ul>
                         </li>
                     </ul>
                 </section>
@@ -336,7 +376,7 @@
                             </figure>
                             <div class="project-content">
                                 <h4 class="project-title">Apiconsult</h4>
-                                <p class="project-description">LA API MÁS CONFIABLE DE ECUADOR.</p>
+                                <p class="project-description">Plataforma API orientada a consultas confiables, rápidas y seguras para el mercado ecuatoriano.</p>
                                 <a class="btn-view" href="#" data-prod-url="https://apiconsult.zampisoft.com/" data-repo-url="" aria-label="Ver Apiconsult">Ver</a>
                             </div>
                         </li>
@@ -354,30 +394,30 @@
                             </figure>
                             <div class="project-content">
                                 <h4 class="project-title">Sedifax</h4>
-                                <p class="project-description">Plataforma de ventas.</p>
+                                <p class="project-description">Sistema de ventas y gestión comercial enfocado en eficiencia operativa.</p>
                                 <a class="btn-view" href="#" data-prod-url="https://sedifax.com/home" data-repo-url="" aria-label="Ver Sedifax">Ver</a>
                             </div>
                         </li>
 
                         <li class="project-card">
                             <figure class="project-media">
-                                <img src="{{asset('/proyectos/defect.jpg')}}" alt="Gestion de Documentos" loading="lazy" decoding="async" width="400" height="300">
+                                <img src="{{asset('/proyectos/defect.jpg')}}" alt="Gestión de Documentos" loading="lazy" decoding="async" width="400" height="300">
                             </figure>
                             <div class="project-content">
-                                <h4 class="project-title">Gestion de Documentos</h4>
-                                <p class="project-description">Plataforma de gestión de documentos.</p>
-                                <a class="btn-view" href="#" data-prod-url="" data-repo-url="https://github.com/TheChinox7/gesti-n-de-documentos.git" aria-label="Ver Tesis - Gestion de Documentos">Ver</a>
+                                <h4 class="project-title">Gestión de Documentos</h4>
+                                <p class="project-description">Aplicación para administrar, organizar y consultar documentos de forma centralizada.</p>
+                                <a class="btn-view" href="#" data-prod-url="" data-repo-url="https://github.com/TheChinox7/gesti-n-de-documentos.git" aria-label="Ver tesis - Gestión de Documentos">Ver</a>
                             </div>
                         </li>
 
                         <li class="project-card">
                             <figure class="project-media">
-                                <img src="{{asset('/proyectos/defect.jpg')}}" alt="Creador de Silabos" loading="lazy" decoding="async" width="400" height="300">
+                                <img src="{{asset('/proyectos/defect.jpg')}}" alt="Creador de Sílabos" loading="lazy" decoding="async" width="400" height="300">
                             </figure>
                             <div class="project-content">
-                                <h4 class="project-title">Creador de Silabos</h4>
-                                <p class="project-description">Plataforma de creación de silabos.</p>
-                                <a class="btn-view" href="#" data-prod-url="" data-repo-url="https://github.com/TheChinox7/creador-de-silabos-web.git" aria-label="Ver Creador de Silabos">Ver</a>
+                                <h4 class="project-title">Creador de Sílabos</h4>
+                                <p class="project-description">Herramienta web para generar y gestionar sílabos académicos de manera estructurada.</p>
+                                <a class="btn-view" href="#" data-prod-url="" data-repo-url="https://github.com/TheChinox7/creador-de-silabos-web.git" aria-label="Ver Creador de Sílabos">Ver</a>
                             </div>
                         </li>
                     </ul>
@@ -398,37 +438,32 @@
                 <section class="contact-form">
                     <h3 class="h3 form-title">WhatsApp</h3>
 
-                    <div class="wa-header">
-                        <div class="wa-icon" aria-hidden="true">
-                            <ion-icon name="logo-whatsapp"></ion-icon>
+                    <div class="wa-shell">
+                        <div class="wa-header">
+                            <div class="wa-icon" aria-hidden="true">
+                                <ion-icon name="logo-whatsapp"></ion-icon>
+                            </div>
+                            <div class="wa-copy">
+                                <p class="wa-kicker">Contacto directo</p>
+                                <p class="wa-subtitle">Escríbeme directamente por WhatsApp y conversemos sobre tu proyecto sin formularios ni esperas.</p>
+                                <ul class="wa-benefits" aria-label="Beneficios de contacto">
+                                    <li class="wa-benefit">Respuesta rápida</li>
+                                    <li class="wa-benefit">Atención personalizada</li>
+                                    <li class="wa-benefit">Sin compromiso</li>
+                                </ul>
+                            </div>
                         </div>
-                        <p class="wa-subtitle">Te contactaré inmediatamente por WhatsApp</p>
+
+                        <div class="wa-direct">
+                            <p class="wa-direct-text">
+                                Disponible en <strong>+593 987223133</strong>. El botón abrirá WhatsApp con un mensaje inicial para que puedas escribirme de inmediato.
+                            </p>
+                            <a class="wa-btn" href="https://wa.me/593987223133?text=Hola%20Jino%2C%20quiero%20conversar%20sobre%20un%20proyecto." target="_blank" rel="noopener noreferrer" aria-label="Contactar a Jino Morales por WhatsApp">
+                                <ion-icon name="logo-whatsapp"></ion-icon>
+                                <span>Contactarme por WhatsApp</span>
+                            </a>
+                        </div>
                     </div>
-
-
-                    <form id="waForm" class="wa-form" action="{{ route('contact.whatsapp') }}" method="POST">
-                        @csrf
-                        <div class="wa-grid">
-                            <div class="wa-field">
-                                <label for="waCountry" class="wa-label">País</label>
-                                <select id="waCountry" name="dial_code" class="wa-select" aria-label="Selecciona tu país" required>
-                                    <option value="+593">Ecuador (+593)</option>
-                                </select>
-                            </div>
-                            <div class="wa-field">
-                                <label for="waPhone" class="wa-label">Número telefónico</label>
-                                <input id="waPhone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" pattern="^[0-9]{7,15}$" class="wa-input" placeholder="Solo dígitos" required />
-                            </div>
-                        </div>
-
-                        <div class="wa-actions">
-                            <button id="waSubmit" type="submit" class="wa-btn" aria-label="Enviar por WhatsApp">
-                                <ion-icon name="paper-plane"></ion-icon>
-                                <span>Enviar por WhatsApp</span>
-                            </button>
-                            <div id="waStatus" class="wa-status" role="status" aria-live="polite"></div>
-                        </div>
-                    </form>
                 </section>
             </article>
         </div>
@@ -436,36 +471,6 @@
 
     <!-- SCRIPTS -->
     <script src="{{ asset('js/script.js')}}"></script>
-
-    <!-- Sincronización de menú y secciones -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelectorAll('[data-nav-link]');
-            const pages = document.querySelectorAll('[data-page]');
-            const sectionMap = {
-                'Sobre mí': 'sobre-mi',
-                'Currículum': 'curriculum',
-                'Portafolio': 'portafolio',
-                'Contacto': 'contacto'
-            };
-            navLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    // Quitar clase active de todos los links
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    // Agregar clase active al link clicado
-                    this.classList.add('active');
-                    // Ocultar todas las secciones
-                    pages.forEach(page => page.classList.remove('active'));
-                    // Mostrar la sección correspondiente
-                    const pageName = sectionMap[this.textContent.trim()];
-                    const targetPage = document.querySelector(`[data-page="${pageName}"]`);
-                    if (targetPage) {
-                        targetPage.classList.add('active');
-                    }
-                });
-            });
-        });
-    </script>
 
     <!-- IONICONS -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

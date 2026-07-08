@@ -1,28 +1,27 @@
-# JinoxWeb — Portafolio en Laravel 12
+# JinoxWeb — Portafolio en Laravel 13
 
-Proyecto de portafolio personal construido sobre Laravel 12 (PHP 8.2), con vistas personalizadas, assets estáticos y un formulario de contacto que integra WhatsApp mediante Evolution API.
+Proyecto de portafolio personal construido sobre Laravel 13 (PHP 8.2+), con vistas personalizadas, assets estáticos y contacto directo por WhatsApp.
 
 ## Características
 
 - Página principal (`/`) con contenido en español y diseño de portafolio.
-- Formulario de contacto que envía mensajes por WhatsApp via Evolution API.
+- Botón de contacto directo por WhatsApp al número profesional.
 - Pipeline de assets con Vite (`npm run dev` / `npm run build`).
 - Migraciones, colas y sesiones configuradas en base de datos.
 
 ## Tecnologías y versiones
 
 - `PHP` `^8.2`
-- `Laravel` `^12.0`
+- `Laravel` `^13.0`
 - `Vite` `^7.x`
 - `Node.js` y `npm` (para assets)
 - Opcional: `tailwindcss` (presente en devDependencies, no requerido para los estilos actuales).
 
 ## Estructura del proyecto
 
-- `routes/web.php`: Define rutas principales (`GET /`, `POST /contact`).
-- `resources/views/welcome.blade.php`: Vista principal del portafolio y formulario de contacto.
+- `routes/web.php`: Define la ruta principal (`GET /`).
+- `resources/views/welcome.blade.php`: Vista principal del portafolio y contacto.
 - `public/`: Assets estáticos (CSS, JS, imágenes). El front controller es `public/index.php` con `.htaccess` para Apache.
-- `app/Http/Controllers/ContactController.php`: Lógica para enviar WhatsApp usando Evolution API.
 - `config/*`: Configuraciones de app, mail, queue, etc.
 - `database/migrations/*`: Migraciones por defecto (usuarios, cache, jobs).
 
@@ -30,7 +29,7 @@ Proyecto de portafolio personal construido sobre Laravel 12 (PHP 8.2), con vista
 
 - XAMPP (Apache y MySQL activos) o entorno LAMP/Laravel equivalente.
 - Base de datos MySQL creada: `jinoxweb` (según `.env.example`).
-- Composer y PHP 8.2.
+- Composer y PHP 8.2 o superior.
 - Node.js y npm para el pipeline de assets.
 
 ## Instalación
@@ -60,10 +59,6 @@ Variables relevantes en `.env`:
   - `SESSION_DRIVER=database`
   - `QUEUE_CONNECTION=database`
   - `CACHE_STORE=database`
-- Evolution API (WhatsApp):
-  - `EVOLUTION_API_URL` (URL base de la API)
-  - `EVOLUTION_API_KEY` (API key privada)
-  - `EVOLUTION_API_INSTANCE_NAME` (nombre de instancia)
 
 
 ## Ejecución en desarrollo
@@ -78,22 +73,10 @@ Variables relevantes en `.env`:
 - Desarrollo: `npm run dev`
 - Producción: `npm run build` (genera assets optimizados)
 
-## Rutas y API
+## Rutas
 
 - `GET /` → Renderiza `welcome.blade.php`.
-- `POST /contact` → Envío de WhatsApp (`ContactController@sendWhatsApp`).
-
-Request (form-data o JSON):
-
-- `dial_code` (string, requerido, formato `+593`, `+34`, etc.)
-- `phone` (string, requerido, solo dígitos, 7–15 caracteres)
-- `message` (string, opcional, máximo 1000 caracteres)
-
-Respuesta (JSON):
-
-- Éxito: `{ success: true, message: "Mensaje enviado correctamente." }`
-- Error de validación: `{ success: false, message: "Datos inválidos.", errors: {...} }` (422)
-- Error de API: `{ success: false, message: "..." }` (código HTTP desde Evolution API)
+- La sección de contacto abre WhatsApp mediante `https://wa.me/593987223133`.
 
 ## Testing
 
