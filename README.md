@@ -1,11 +1,14 @@
-# JinoxWeb — Portafolio en Laravel 13
+# MAKYSOFT S.A.S — Sitio corporativo en Laravel 13
 
-Proyecto de portafolio personal construido sobre Laravel 13 (PHP 8.2+), con vistas personalizadas, assets estáticos y contacto directo por WhatsApp.
+Sitio web corporativo de MAKYSOFT S.A.S, empresa ecuatoriana de desarrollo de software. Está construido sobre Laravel 13 (PHP 8.2+) e incluye una landing empresarial responsive, identidad visual oficial y contacto directo por WhatsApp y correo.
 
 ## Características
 
-- Página principal (`/`) con contenido en español y diseño de portafolio.
-- Botón de contacto directo por WhatsApp al número profesional.
+- Página principal (`/`) con contenido corporativo en español.
+- Secciones de servicios, soluciones, empresa, proceso y contacto.
+- Identidad visual oficial de MAKYSOFT.
+- Contacto por WhatsApp al `+593 96 289 4078`.
+- Contacto por correo a `soporte@makysoft.com`.
 - Pipeline de assets con Vite (`npm run dev` / `npm run build`).
 - Migraciones, colas y sesiones configuradas en base de datos.
 
@@ -20,7 +23,7 @@ Proyecto de portafolio personal construido sobre Laravel 13 (PHP 8.2+), con vist
 ## Estructura del proyecto
 
 - `routes/web.php`: Define la ruta principal (`GET /`).
-- `resources/views/welcome.blade.php`: Vista principal del portafolio y contacto.
+- `resources/views/welcome.blade.php`: Landing corporativa de MAKYSOFT.
 - `public/`: Assets estáticos (CSS, JS, imágenes). El front controller es `public/index.php` con `.htaccess` para Apache.
 - `config/*`: Configuraciones de app, mail, queue, etc.
 - `database/migrations/*`: Migraciones por defecto (usuarios, cache, jobs).
@@ -76,7 +79,7 @@ Variables relevantes en `.env`:
 ## Rutas
 
 - `GET /` → Renderiza `welcome.blade.php`.
-- La sección de contacto abre WhatsApp mediante `https://wa.me/593987223133`.
+- La sección de contacto abre WhatsApp mediante `https://wa.me/593962894078`.
 
 ## Testing
 
@@ -95,6 +98,6 @@ Variables relevantes en `.env`:
 - No subas `.env` ni credenciales privadas al repositorio.
 - Actualiza `APP_URL` para reflejar el dominio real en despliegue.
 
-## Autor
+## Empresa
 
-Portafolio de Jino Morales — Desarrollador Full Stack.
+MAKYSOFT S.A.S — Soluciones de software para empresas.
